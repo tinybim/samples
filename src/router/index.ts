@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/flow',
       name: 'flow',
       component: ()=>import(`../views/Flow.vue`),
+    },
+    {
+      path: '/select',
+      name: 'select',
+      component: ()=>import(`../views/Selection.vue`),
     }
   ],
 })

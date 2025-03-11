@@ -23,6 +23,9 @@
       <div>
         <RouterLink to="/flow">水流</RouterLink>
       </div>
+      <div>
+        <RouterLink to="/select">选择</RouterLink>
+      </div>
     </div>
     <div>
       <RouterView />
