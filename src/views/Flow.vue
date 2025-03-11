@@ -55,14 +55,26 @@ const flow=()=>{
     segment = new FlowSegment(start,end,1000,2000,0,500,new Color([255,0,0]));
 
     view.flow_effects.set(model,e.id,segment);
-    view.zoom_elements([e]);
-    
+    view.zoom_elements([e]);    
+}
+const pause = ()=>{
+    segment.pause();
+}
+const restart =()=>{
+    segment.restart();
 }
 
+const clear =()=>{
+    const e = model.get_element(883);
+    view.flow_effects.set(e.model,e.id,null);
+}
 </script>
 <template>
     <div ref="dom" style="width: 100%;height: 100%;"></div>
     <div style="position:fixed; top: 20px; left: 250px;">
         <button @click="flow">流动</button>
+        <button @click="pause">暂停</button>
+        <button @click="restart">重启</button>
+        <button @click="clear">清空</button>
     </div>
 </template>
