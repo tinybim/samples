@@ -38,6 +38,11 @@ const router = createRouter({
       path: '/select',
       name: 'select',
       component: ()=>import(`../views/Selection.vue`),
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: ()=>import(`../views/Filter.vue`),
     }
   ],
 })
