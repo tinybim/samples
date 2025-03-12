@@ -31,11 +31,7 @@ onMounted(async ()=>{
             view.selection.add_selection_action((r)=>{
                 console.log(r);
             });            
-        }    
-        
-        setTimeout(async ()=>{
-            await parameter_value_filter();
-        },3000);
+        }
     }
 });
 onBeforeUnmount(()=>{
